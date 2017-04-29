@@ -1,0 +1,28 @@
+<ion-view view-title="政策文件">
+    <script src="../js/paginator.js" type="text/javascript"></script>
+    <ion-content style="background: #f5f5f5;" overflow-scroll="true" has-bouncing="false"  ng-init="init()">
+        <div class="list">
+            <ion-item class="item-divider">
+
+            </ion-item>
+            <ion-item ng-repeat="item in parameter.data">
+                <span class="news-item-l"  ui-sref="app.filesdetail({id:{{item.Id}}})" ng-bind="item.ftitle">
+
+                </span>
+                <span class="item-note news-item-r" ng-bind="item.fpubtime | cuttime"></span>
+            </ion-item>
+            <ion-item class="item-divider">
+                <div class="button-bar" id="pagination" >
+                    <a class="button  button-small button-balanced"><i class="ion-chevron-left"></i></a>
+                    <a class="button  button-small button-balanced btn-active">1</a>
+                    <a class="button  button-small button-balanced">2</a>
+                    <a class="button  button-small button-balanced">3</a>
+                    <a class="button  button-small button-balanced">...</a>
+                    <a class="button  button-small button-balanced">5</a>
+                    <a class="button  button-small button-balanced">6</a>
+                    <a class="button  button-small button-balanced"><i class="ion-chevron-right"></i></a>
+                </div>
+            </ion-item>\
+        </div>
+    </ion-content>
+</ion-view>

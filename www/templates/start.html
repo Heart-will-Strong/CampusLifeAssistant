@@ -1,0 +1,37 @@
+<ion-view ng-controller="startCtrl">
+    <ion-content overflow-scroll="true">
+        <style>
+            .blue {
+                background: blue;
+            }
+            
+            .yellow {
+                background: yellow;
+            }
+            
+            .pink {
+                background: pink;
+            }
+        </style>
+
+        <ion-slide-box class="start-container">
+            <ion-slide class="box">
+                <div class="box blue">
+                    <h1>BLUE</h1>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box yellow">
+                    <h1>YELLOW</h1></div>
+            </ion-slide>
+            <ion-slide on-slide-changed="slideHasChanged(index)">
+                <div class="box pink">
+                    <h1>PINK</h1>
+                    <button class="button button-assertive" ui-sref="login">
+                    开始使用
+                    </button>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
+</ion-view>

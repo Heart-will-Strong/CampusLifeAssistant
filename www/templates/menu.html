@@ -1,0 +1,31 @@
+﻿<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable master-bg">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <!--<ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon white" menu-toggle="left">
+        </button>
+            </ion-nav-buttons>-->
+        </ion-nav-bar>
+
+        <ion-tabs class="tabs-positive tabs-icon-only tabs-color">
+            <ion-tab title="主页" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" ui-sref="app.main">
+                <ion-nav-view name="main"></ion-nav-view>
+            </ion-tab>
+            <!--<ion-nav-view name="message"></ion-nav-view> -->
+            <!--<ion-tab title="信息" icon-off="ion-ios-book-outline" icon-on="ion-ios-book" ui-sref="app.message">
+              
+            </ion-tab>-->
+            <ion-tab title="个人信息" icon-off="ion-ios-person-outline" icon-on="ion-ios-person" ui-sref="app.aboutme">
+                <ion-nav-view name="aboutme"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="设置" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" ui-sref="app.setting">
+                <ion-nav-view name="setting"></ion-nav-view>
+            </ion-tab>
+
+        </ion-tabs>
+    </ion-side-menu-content>
+</ion-side-menus>

@@ -1,0 +1,341 @@
+<ion-view view-title="校历查询">
+    <ion-content overflow-scroll="true" has-bouncing="false">
+        <div class="list" ng-init="initCalendar()">
+            <div class="row row-center" style="background: #0fb595;">
+                <div class="col-33  text-center">
+                    <select class="nature-bg">
+                        <option selected value="0">第一周</option>
+                        <option value="1">第二周</option>
+                        <option value="2">第三周</option>
+                        <option value="3">第四周</option>
+                        <option value="4">第五周</option>
+                        <option value="5">第六周</option>
+                        <option value="6">第七周</option>
+                        <option value="7">第八周</option>
+                        <option value="8">第九周</option>
+                        <option value="9">第十周</option>
+                        <option value="10">第十一周</option>
+                        <option value="11">第十二周</option>
+                        <option value="12">第十三周</option>
+                        <option value="13">第十四周</option>
+                        <option value="14">第十五周</option>
+                        <option value="15">第十六周</option>
+                        <option value="16">第十七周</option>
+                        <option value="17">第十八周</option>
+                        <option value="18">第十九周</option>
+                        <option value="19">第二十周</option>
+                    </select>
+                </div>
+                <div class="col-33  text-center">
+                    <select ng-change="rerenderCalendar()" ng-model="selectParames.year" class="nature-bg">
+                        <option value="2016年">2016年</option>
+                        <option selected value="2017年">2017年</option>
+                        <option value="2018年">2018年</option>
+                    </select>
+                </div>
+                <div class="col-33  text-center">
+                    <select ng-change="rerenderCalendar()" class="nature-bg"  ng-model="selectParames.month">
+                        <option selected value="1月">1月</option>
+                        <option value="2月">2月</option>
+                        <option value="3月">3月</option>
+                        <option value="4月">4月</option>
+                        <option value="5月">5月</option>
+                        <option value="6月">6月</option>
+                        <option value="7月">7月</option>
+                        <option value="8月">8月</option>
+                        <option value="9月">9月</option>
+                        <option value="10月">10月</option>
+                        <option value="11月">11月</option>
+                        <option value="12月">12月</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calendar-container" style="margin-top: 30px;margin-bottom: 30px;">
+                <div class="head-row">{{selectParames.year+selectParames.month}}</div>
+                <!--  头-->
+                <div class="calendar-row">
+                    <div class="head-item head-item-first">周日</div>
+                    <div class="head-item">周一</div>
+                    <div class="head-item">周二</div>
+                    <div class="head-item">周三</div>
+                    <div class="head-item">周四</div>
+                    <div class="head-item">周五</div>
+                    <div class="head-item">周六</div>
+                </div>
+
+                <!--第一行-->
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+                <!--第二行-->
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date">1</span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--第三行-->
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calendar-row">
+                    <div class="cbody-item head-item-first">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-event">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                    <div class="cbody-item">
+                        <div>
+                            <span class="calendar-date"></span>
+                            <span class="calendar-noevent">no</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,1728 @@
+﻿/*
+    Login
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: '微软雅黑' !important;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+.start-container {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bold-color{
+    background:#0fb595;
+}
+.master-color{
+    color: #0fb595;
+}
+
+
+.gray-color{
+    background: #f5f5f5;
+}
+
+.red{
+    color: red;
+}
+
+.disblock{
+    display: block;
+}
+
+.nature-bg{
+    border: none;
+    background: #0fb595 !important;
+    color: white !important;
+}
+
+
+.button-balanced{
+    background:#0fb595 !important;
+}
+
+.btn-active{
+    color: #ffffff !important;
+    background: #c9302c !important;
+}
+
+.btn-active:active{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+.button-balanced:active{
+    /*background: #1df8ce !important;*/
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+
+
+.news-title{
+    font-size: 1.1em;
+}
+
+/*苹果5 基准是1*/
+
+@media screen and (min-width: 320px) {
+    .nav-icon {
+        width: 100%;
+        height: 20rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2rem;
+        height: 2rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 15rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 5.9rem;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 5rem;
+        height: 5rem;
+        background: rgba(22, 187, 155, 0.8);
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-desc-only {
+        font-size: 0.8em;
+    }
+    .main-item-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: inline-block;
+    }
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 35rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty,
+    .teacher-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 27rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .teacher-empty{
+        height: 35rem;
+    }
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 30rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+
+    .empty-wrap{
+        width: inherit;
+        height: 20rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 12rem;
+        height: 12rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 12rem;
+        height: 12rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+
+    .book-margin{
+        margin-bottom: 0.8rem;
+        display:block;
+    }
+
+
+    .non-open{
+        background: url("../img/cat.png");
+        background-size: cover;
+        width: 16rem;
+        height: 16rem;
+        margin: 0 auto;
+    }
+
+    .book-icon{
+        background: url("../img/book.png");
+        background-size: cover;
+        width: 16rem;
+        height: 16rem;
+        margin: 0 auto;
+    }
+
+    .upset-icon{
+        background: url("../img/upset.png");
+        background-size: cover;
+        width: 16rem;
+        height: 16rem;
+        margin: 0 auto;
+    }
+
+    .empty-grade{
+        height: 35.2rem !important;
+    }
+
+    .empty-exam{
+        height: 39rem !important;
+    }
+}
+
+
+/*三星S5 1.125*/
+
+@media screen and (min-width: 360px) and (-webkit-min-device-pixel-ratio:1) {
+    .nav-icon {
+        width: 100%;
+        height: 22.5rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2.25rem;
+        height: 2.25rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 17.5rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 6.75rem;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 6rem;
+        height: 6rem;
+        background: rgba(22, 187, 155, 0.8);
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-desc-only {
+        font-size: 1em;
+    }
+    .main-item-icon {
+        width: 2.81rem;
+        height: 2.81rem;
+        display: inline-block;
+    }
+
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 39.4rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 30.375rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 33.75rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .empty-wrap{
+        width: inherit;
+        height: 22.5rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+    .book-margin{
+        margin-bottom: 0.9rem;
+        display:block;
+    }
+
+
+
+    .empty-grade{
+        height: 41rem !important;
+    }
+
+
+    .empty-exam{
+        height: 45rem !important;
+    }
+
+}
+
+
+@media screen and (min-width: 360px) and (-webkit-min-device-pixel-ratio:2) {
+    .nav-icon {
+        width: 100%;
+        height: 22.5rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2.25rem;
+        height: 2.25rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 20rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 7.8rem;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 6.3rem;
+        height: 6.3rem;
+        background: rgba(22, 187, 155, 0.8);
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+
+    }
+    .main-desc-only {
+        font-size: 1em;
+    }
+    .main-item-icon {
+        width: 2.81rem;
+        height: 2.81rem;
+        display: inline-block;
+    }
+
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 39.4rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 30.375rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 33.75rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .empty-wrap{
+        width: inherit;
+        height: 22.5rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+    .book-margin{
+        margin-bottom: 0.9rem;
+        display:block;
+    }
+
+
+
+    .empty-grade{
+        height: 41rem !important;
+    }
+
+
+    .empty-exam{
+        height: 45rem !important;
+    }
+
+}
+
+
+
+@media screen and (min-width: 360px) and (-webkit-min-device-pixel-ratio:3) {
+    .nav-icon {
+        width: 100%;
+        height: 22.5rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2.25rem;
+        height: 2.25rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.56rem;
+    }
+    .main-nav-container {
+        width: 100%;
+      /*  height: 17.5rem;*/
+        height: 22.5rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 7.1rem;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 6rem;
+        height: 6rem;
+       /* background: rgba(22, 187, 155, 0.8);*/
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-desc-only {
+        font-size: 1em;
+    }
+    .main-item-icon {
+        width: 2.81rem;
+        height: 2.81rem;
+        display: inline-block;
+    }
+
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 39.4rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 30.375rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 33.75rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .empty-wrap{
+        width: inherit;
+        height: 22.5rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 13.5rem;
+        height: 13.5rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+    .book-margin{
+        margin-bottom: 0.9rem;
+        display:block;
+    }
+
+
+
+    .empty-grade{
+        height: 41rem !important;
+    }
+
+
+    .empty-exam{
+        height: 45rem !important;
+    }
+
+}
+
+
+
+/*苹果6 1.17*/
+
+@media screen and (min-width: 375px) and (-webkit-min-device-pixel-ratio:2)  {
+    .nav-icon {
+        width: 100%;
+        height: 23.4rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2.34rem;
+        height: 2.34rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.58rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.58rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 19rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 7.0rem;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 5.8rem;
+        height: 5.8rem;
+        background: rgba(22, 187, 155, 0.8);
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-desc-only {
+        font-size: 1em;
+    }
+    .main-item-icon {
+        width: 2.93rem;
+        height: 2.93rem;
+        display: inline-block;
+    }
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 41rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 31.6rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 35.1rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .empty-wrap{
+        width: inherit;
+        height: 23.4rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 14.04rem;
+        height: 14.04rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 14.04rem;
+        height: 14.04rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+    .book-margin{
+        margin-bottom: 0.936rem;
+        display:block;
+    }
+
+
+    .empty-grade{
+        height: 43rem !important;
+    }
+
+
+    .empty-exam{
+        height: 47.5rem !important;
+    }
+
+}
+
+
+/*苹果6P 1.29*/
+
+@media screen and (min-width: 414px) {
+    .nav-icon {
+        width: 100%;
+        height: 25.88rem;
+    }
+    .login-icon-user,
+    .login-icon-pwd {
+        width: 2.59rem;
+        height: 2.59rem;
+        background: url(../img/user.png) no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        display: inline-block;
+        margin-right: 0.67rem;
+    }
+    .divide {
+        color: #a9b7b7;
+        display: inline-block;
+        margin-right: 0.67rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 15rem;
+    }
+    .main-nav-container {
+        width: 100%;
+        height: 21.8rem;
+    }
+    .main-flex-container {
+        width: 100%;
+        height: 7.74rem;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-item {
+        width: 6.5rem;
+        height: 6.5rem;
+        background: rgba(22, 187, 155, 0.8);
+        border-radius: 5px;
+        display: flex;
+        display: -webkit-flex;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+    .main-desc-only {
+        font-size: 1em;
+    }
+    .main-item-icon {
+        width: 3.225rem;
+        height: 3.225rem;
+        display: inline-block;
+    }
+
+    .book-init{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 48.5rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        /* background: #f5f5f5;*/
+    }
+
+    .result-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 44rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+
+    .classroom-empty{
+        display: flex;
+        display: -webkit-flex;
+        width: inherit;
+        height: 44.5rem;
+        -o-justify-content: center;
+        -ms-justify-content: center;
+        -moz-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -o-align-items: center;
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+    }
+
+    .empty-wrap{
+        width: inherit;
+        height: 25.8rem;
+    }
+
+    .empty-icon{
+        margin: 0px auto;
+        width: 15.48rem;
+        height: 15.48rem;
+        background: url("../img/cry.png");
+        background-size: cover;
+    }
+
+
+    .init-search-icon{
+        margin: 0px auto;
+        width: 15.48rem;
+        height: 15.48rem;
+        background: url("../img/happy.png");
+        background-size: cover;
+    }
+
+    .book-margin{
+        margin-bottom: 1.032rem;
+        display:block;
+    }
+
+
+    .empty-grade{
+        height: 49rem !important;
+    }
+
+    .empty-exam{
+        height: 52.5rem !important;
+    }
+
+}
+
+
+
+.loginTitle {
+    font-family: '微软雅黑';
+    font-size: 1.5em !important;
+}
+
+.nav-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url(../img/login.jpeg);
+    background-size: cover;
+}
+
+.login-icon-pwd {
+    background: url(../img/pwd.png) no-repeat !important;
+    background-size: cover !important;
+}
+
+.master-bg {
+    background: #16bb9b !important;
+}
+
+.white,
+.icon,
+.title {
+    color: white!important;
+}
+
+.master-text {
+    color: #16bb9b !important;
+}
+
+.btn-login {
+    font-family: '微软雅黑';
+    font-size: 1.2em;
+}
+
+.left-title {
+    font-size: 1.2em;
+    font-family: '微软雅黑';
+}
+
+
+/*重写选项卡的颜色*/
+
+.tabs-positive > .tabs,
+.tabs.tabs-positive {
+    background: #16bb9b !important;
+}
+
+.spring {
+    background: url(../img/spring.jpg);
+    background-size: cover;
+}
+
+.summer {
+    background: url(../img/summer.jpg);
+    background-size: cover;
+}
+
+.autumn {
+    background: url(../img/autumn.jpg);
+    background-size: cover;
+}
+
+.winter {
+    background: url(../img/winter.jpg);
+    background-size: cover;
+}
+
+.main-item {
+    text-align: center;
+}
+
+.main-desc {
+    color: white;
+    font-family: '微软雅黑';
+    display: inline-block;
+}
+
+.icon-classroom {
+    background: url(../img/classroom.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-schedule {
+    background: url(../img/schedule.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-exam {
+    background: url(../img/exam.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-textbook {
+    background: url(../img/textbook.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-inform {
+    background: url(../img/inform.png) no-repeat;
+    background-size: cover;
+}
+
+.-icon-calendar {
+    background: url(../img/calendar.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-grade {
+    background: url(../img/grade.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-telephone {
+    background: url(../img/telephone.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-library {
+    background: url(../img/library.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-card {
+    background: url(../img/card.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-market {
+    background: url(../img/market.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-file {
+    background: url(../img/file.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-map {
+    background: url(../img/map.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-bus {
+    background: url(../img/bus.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-e-learning {
+    background: url(../img/e-learning.png) no-repeat;
+    background-size: cover;
+}
+
+.icon-feedback {
+    background: url(../img/feedback.png) no-repeat;
+    background-size: cover;
+}
+
+.special-gender {
+    background: url(../img/gender.png) no-repeat;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.select-tag {
+    color: white;
+    font-family: '微软雅黑';
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.schedule-week {
+    text-align: center;
+    background: #0fb595;
+    height: 4rem;
+    margin-bottom: 0;
+}
+
+.schedule-select {
+    width: 30%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*.schedule-table {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.schedule-table th {
+    width: 12.5%;
+    border: 1px solid #16bb9b;
+    border-top: none;
+    height: 4rem;
+    line-height: 2rem;
+
+border-left: none;
+margin: 0;
+padding: 0;
+
+}
+.schedule-table th:first-child {
+    line-height: 4rem;
+}
+.schedule-table th:last-child {
+    border-right: none;
+}
+.schedule-table td:first-child {
+    border-left: none;
+    border-right: 1px solid #16bb9b;
+    border-bottom: 1px solid #16bb9b;
+    line-height: 4rem;
+}
+.schedule-table td {
+    word-break: break-all;
+    height: 5rem;
+    font-size: 0.8em;
+    align-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+*/
+
+.head-container {
+    width:100%;
+    display: flex;
+    display: -webkit-flex;
+    height: 6rem;
+}
+.h-item{
+    width: 12.5%;
+    display: block;
+    height: 6rem;
+    float: left;
+    line-height: 5rem;
+    /*justify-content: center;
+    align-items: center;*/
+    text-align: center;
+    border-right: 1px  solid #16bb9b;
+    border-bottom: 1px  solid #16bb9b;
+    background: #f5f5f5;
+}
+.h-item:last-child{
+    border-right: none;
+}
+
+.item-container{
+    width:100%;
+    display: flex;
+    display: -webkit-flex;
+    height: 16rem;
+}
+
+
+.schedule-cell{
+    display: flex !important;
+    display: -webkit-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.row-header-item,
+.i-item{
+    width: 12.5%;
+    display: block;
+    text-align: center;
+    word-break:break-all;
+    height: 16rem;
+    font-size: 12px;
+    align-content: center;
+}
+
+
+
+
+.active-bg-r{
+    background: #ef473a;
+    color: #ffffff;
+}
+
+.active-bg-p{
+    background: #007aff;
+    color: #ffffff;
+}
+
+.active-bg-a{
+    background: #fa17f2;
+    color: #ffffff;
+}
+
+.active-bg-b{
+    background: #fa1747;
+    color: #ffffff;
+}
+.active-bg-c{
+    background: #17fa4c;
+    color: #ffffff;
+}
+.active-bg-d{
+    background: #fa7c17;
+    color: #ffffff;
+}
+.active-bg-e{
+    background: #8717fa;
+    color: #ffffff;
+}
+.active-bg-f{
+    background: #8717fa;
+    color: #ffffff;
+}
+.active-bg-g{
+    background: #fa175c;
+    color: #ffffff;
+}
+.active-bg-h{
+    background: #fa8717;
+    color: #ffffff;
+}
+
+
+
+.i-item-bg,
+.row-header-item{
+    background: #f5f5f5;
+}
+
+.row-header-item .top,
+.row-header-item .bottom{
+    width: 100%;
+    line-height:8rem;
+    height: 8rem;
+    border-bottom: 1px solid #16bb9b;
+}
+
+
+.row-header-item{
+    border-right: 1px solid #16bb9b;
+}
+
+
+/*教室查询*/
+
+.classroom{
+    background: #0fb595;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+}
+
+.classroom-title{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+
+.icon-down{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAxElEQVQ4T82U0Q3CMAxE7zZgA0agbAATwQbABjARbACMwAbd4JBRiNqQhCa0Ev6N/OJnOyFGDo7MwzRASTMAix+rvZNsXxU64A3AvBL6ANB4oIOuAJwrgWuSF8vt9VDSEcCmEHoiuX3nhEDrZYm6V40CK9S9ahLooEPUDyT3YXuSeyjJ1FOrZCvSxHqdA1rCNTGgJUm78COyL0WSKe2CrKhqtoddQKCeVC0BdtWTqoOBbuqm3pK06Wdjmt/m260l5/9f4RM0K0MVChYumQAAAABJRU5ErkJggg==");
+    background-size: cover;
+    vertical-align: middle;
+}
+
+/*通知公告开始部分*/
+
+
+
+/*图书查询开始部分*/
+
+.result-title{
+    color: #16bb9b;
+}
+
+.empty-text{
+    color: #333;
+}
+
+.book-title{
+    padding:1rem;
+    padding-bottom: 0;
+}
+
+.img-padding{
+    padding: 0.5rem;
+}
+
+.bookStatus-use{
+    color: #16bb9b;
+}
+
+.bookStatus-nouse,
+.book-nonumber{
+    color: #ef473a;
+}
+
+
+.book-author{
+    font-size: 14px;
+}
+
+.book-publish,
+.book-amount,
+.book-time{
+    font-size: 14px;
+}
+
+
+.book-number{
+    color: #28a54c;
+}
+
+.book-caption{
+    margin-right: 5px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.setting-select{
+    border: none;vertical-align: middle;
+}
+
+.news-item-l{
+    width: 75%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-item-r{
+    width: 25%;
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
+.grade-l{
+    width: 60%;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.5em;
+}
+.grade-r{
+    width:20%;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.5em;
+}
+
+.grade-title{
+    font-size: 1.2em;
+    padding: 5px 0;
+}
+
+.grade-l-50{
+    width:50% !important;
+}
+
+.grade-l-35{
+    width: 35% !important;
+}
+
+.grade-l-15{
+    width: 15% !important;
+}
+
+.classroom-20{
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    float: left;
+}
+
+.classroom-50{
+    text-align: center;
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.col-30{
+    width: 30%;
+}
+
+.col-25{
+    width: 25%;
+}
+
+.col-20{
+    width: 20%;
+}
+
+.col-15{
+    width: 15%;
+}
+
+.classroom-30{
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    float: left;
+}
+
+
+.classroom-25{
+    text-align: center;
+    width: 25%;
+    display: inline-block;
+    float: left;
+ }
+
+.classroom-15{
+    text-align: center;
+    width: 15%;
+    display: inline-block;
+    float: left;
+}
+
+.classroom-20{
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    float: left;
+}
+
+
+.classroom-40{
+    text-align: center;
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+.clear-left{
+    padding-left: 0px;
+}
+.clear-right{
+    padding-right: 0px;
+}
+
+.calendar-container{
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.calendar-container .head-item{
+  width:14.28% ;
+  height:60px;
+  float: left;
+    border-bottom:  1px solid #0fb595;
+    border-top:  2px solid #0fb595;
+    border-right:  2px solid #0fb595;
+    text-align: center;
+    line-height: 60px;
+    background: #f5f5f5;
+}
+ .head-item-first{
+    border-left: 2px solid #0fb595;
+}
+
+.head-row{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    border-left:  2px solid #0fb595;
+    border-top:  2px solid #0fb595;
+    border-right:  2px solid #0fb595;
+    background: #f5f5f5;
+    background: #f5f5f5;
+}
+
+
+
+
+.calendar-container .cbody-item{
+    width:14.28% ;
+    height:60px;
+    float: left;
+    border-bottom:  1px solid #0fb595;
+    border-top:  1px solid #0fb595;
+    border-right:  2px solid #0fb595;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -o-align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.calendar-row:last-child .cbody-item{
+    border-bottom:  2px solid #0fb595;
+  }
+
+
+.calendar-date-disable{
+    display: block;
+    color: #ccc;
+}
+
+.date-disable *{
+    color: #ccc !important;
+}
+
+
+.calendar-date{
+   /* color: #0fb595;*/
+}
+
+.teacher-col-50{
+    display: block;;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.calendar-event{
+    display: block;
+   /* color: #0fb595;*/
+
+}
+
+.calendar-noevent{
+    display: block;
+    opacity: 0;
+}
+
+.calendar-activity{
+    background: #e42112 !important;
+    color: #ffffff;
+}
+.calendar-activity .calendar-event{
+    color: #ffffff !important;
+    font-size: 12px;
+}
+
+

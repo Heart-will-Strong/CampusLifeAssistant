@@ -1,0 +1,39 @@
+<ion-view view-title="教师信息查询">
+    <ion-content overflow-scroll="true" has-bouncing="false">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                    <i class="icon ion-search placeholder-icon" style="color: #16bb9b !important;"></i>
+                    <input type="text" placeholder="请输入教师姓名" name="teachername" ng-model="parameter.teachername">
+                </label>
+                <button class="button button-positive master-bg button-small" on-tap="search()">检索</button>
+            </div>
+
+            <div class="row row-center" style="background: #f5f5f5;" ng-show="parameter.request.length>0">
+                <div class="col-50 grade-title text-center">所属学院</div>
+                <div class="col-50 grade-title text-center">教师姓名</div>
+            </div>
+            <div class="item"  ng-repeat="item in parameter.request" ng-show="parameter.request.length>0" ui-sref="app.teacherinfo({id:{{item.tid}}})">
+                <span class="teacher-col-50" ng-bind="item.college"></span>
+                <span class="teacher-col-50" ng-bind="item.tname">李淑娟</span>
+            </div>
+
+            <div class="item" style="border-bottom: none;" ng-show="parameter.init==false">
+                <h2 class="result-title" align="center">共检索到{{parameter.request.length||0}}位老师的信息</h2>
+            </div>
+
+            <div class="result-empty" ng-show="(parameter.request.length<=0||parameter.request==null)&&parameter.init==false">
+                <div class="empty-wrap">
+                    <div class="empty-icon"></div>
+                    <h4 class="empty-text" align="center">抱歉，没有找到!!!</h4>
+                </div>
+            </div>
+            <div class="book-init" ng-show="parameter.init==true">
+                <div class="empty-wrap">
+                    <div class="init-search-icon"></div>
+                    <h4 class="empty-text" align="center">师者，所以传道受业解惑也</h4>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

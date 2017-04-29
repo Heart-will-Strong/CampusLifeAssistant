@@ -1,0 +1,123 @@
+<ion-view view-title="我的课表">
+    <!--overflow-scroll="true" has-bouncing="false"-->
+    <ion-content overflow-scroll="true" has-bouncing="false" ng-init="init();">
+        <div class="list schedule-week">
+            <span class="select-tag">请选择周次</span>
+            <select class="schedule-select white nature-bg" ng-model="parameter.week" ng-change="refresh();">
+                <option value="第一周">第一周</option>
+                <option value="第二周">第二周</option>
+                <option value="第三周">第三周</option>
+                <option value="第四周">第四周</option>
+                <option value="第五周">第五周</option>
+                <option value="第六周">第六周</option>
+                <option value="第七周">第七周</option>
+                <option value="第八周">第八周</option>
+                <option value="第九周">第九周</option>
+                <option value="第十周">第十周</option>
+                <option value="第十一周">第十一周</option>
+                <option value="第十二周">第十二周</option>
+                <option value="第十三周">第十三周</option>
+                <option value="第十四周">第十四周</option>
+                <option value="第十五周">第十五周</option>
+                <option value="第十六周">第十六周</option>
+                <option value="第十七周">第十七周</option>
+                <option value="第十八周">第十八周</option>
+                <option value="第十九周">第十九周</option>
+                <option value="第二十周">第二十周</option>
+            </select>
+        </div>
+        <div class="list">
+            <!--头列-->
+            <div class="head-container">
+                <div class="h-item">{{parameter.currentMonth}}月</div>
+                <div class="h-item">周一</div>
+                <div class="h-item">周二</div>
+                <div class="h-item">周三</div>
+                <div class="h-item">周四</div>
+                <div class="h-item">周五</div>
+                <div class="h-item">周六</div>
+                <div class="h-item">周日</div>
+            </div>
+
+            <div class="item-container">
+                <div class="row-header-item i-item-bg">
+                    <div class="top">1</div>
+                    <div class="bottom">2</div>
+                </div>
+                <div class="i-item schedule-cell"  index="1">
+
+                 </div>
+                <div class="i-item schedule-cell" index="2">
+
+                </div>
+                <div class="i-item schedule-cell" index="3">
+
+                </div>
+                <div class="i-item schedule-cell" index="4">
+
+                </div>
+                <div class="i-item schedule-cell" index="5">
+
+                </div>
+                <div class="i-item schedule-cell" index="6">
+
+                </div>
+                <div class="i-item schedule-cell" index="7">
+
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="row-header-item i-item-bg">
+                    <div class="top">3</div>
+                    <div class="bottom">4</div>
+                </div>
+                <div class="i-item schedule-cell" index="8"></div>
+                <div class="i-item schedule-cell" index="9"></div>
+                <div class="i-item schedule-cell" index="10"></div>
+                <div class="i-item schedule-cell" index="11"></div>
+                <div class="i-item schedule-cell" index="12"></div>
+                <div class="i-item schedule-cell" index="13"></div>
+                <div class="i-item schedule-cell" index="14"></div>
+            </div>
+            <div class="item-container">
+                <div class="row-header-item i-item-bg">
+                    <div class="top">5</div>
+                    <div class="bottom">6</div>
+                </div>
+                <div class="i-item schedule-cell" index="15"></div>
+                <div class="i-item schedule-cell" index="16"></div>
+                <div class="i-item schedule-cell" index="17"></div>
+                <div class="i-item schedule-cell" index="18"></div>
+                <div class="i-item schedule-cell" index="19"></div>
+                <div class="i-item schedule-cell" index="20"></div>
+                <div class="i-item schedule-cell" index="21"></div>
+            </div>
+            <div class="item-container">
+                <div class="row-header-item i-item-bg">
+                    <div class="top">7</div>
+                    <div class="bottom">8</div>
+                </div>
+                <div class="i-item schedule-cell"  index="22"></div>
+                <div class="i-item schedule-cell"  index="23"></div>
+                <div class="i-item schedule-cell"  index="24"></div>
+                <div class="i-item schedule-cell"  index="25"></div>
+                <div class="i-item schedule-cell"  index="26"></div>
+                <div class="i-item schedule-cell"  index="27"></div>
+                <div class="i-item schedule-cell"  index="28"></div>
+            </div>
+            <div class="item-container">
+                <div class="row-header-item i-item-bg">
+                    <div class="top">9</div>
+                    <div class="bottom">10</div>
+                </div>
+                <div class="i-item schedule-cell" index="29"></div>
+                <div class="i-item schedule-cell" index="30"></div>
+                <div class="i-item schedule-cell" index="31"></div>
+                <div class="i-item schedule-cell" index="32"></div>
+                <div class="i-item schedule-cell" index="33"></div>
+                <div class="i-item schedule-cell" index="34"></div>
+                <div class="i-item schedule-cell" index="35"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+<ion-view view-title="成绩查询">
+    <ion-content overflow-scroll="true" has-bouncing="false" ng-init="init();">
+        <label class="item item-input item-select bold-color">
+            <div class="input-label white text-center">
+                请选择学期
+            </div>
+            <select ng-change="change()" ng-model="parameters.semester"  class="setting-select white nature-bg" id="select">
+                <option value="2013-2014-1">2013-2014-1</option>
+                <option value="2013-2014-2">2013-2014-2</option>
+                <option value="2014-2015-1">2014-2015-1</option>
+                <option value="2014-2015-2">2014-2015-2</option>
+                <option value="2015-2016-1">2015-2016-1</option>
+                <option value="2015-2016-2">2015-2016-2</option>
+                <option value="2016-2017-1">2016-2017-1</option>
+                <option value="2016-2017-2">2016-2017-2</option>
+            </select>
+        </label>
+        <div class="result-empty empty-grade" ng-show="result.data==null||result.data.length<=0">
+            <div>
+                <div class="non-open"></div>
+                <h4 class="empty-text" align="center">当前学期的成绩还没有发布!!!</h4>
+            </div>
+        </div>
+        <div class="list" ng-show="result.data.length>0">
+            <div class="row row-center" style="background: #f5f5f5;">
+                <div class="col-60 grade-title text-center">课程名称</div>
+                <div class="col-20 grade-title text-center">成绩</div>
+                <div class="col-20 grade-title text-center">教师</div>
+            </div>
+            <div class="item" ng-repeat="item in result.data">
+               <span class="grade-l">{{item.coursename}}</span>
+               <span class="grade-r">{{item.score}}</span>
+               <span class="grade-r">{{item.teachername}}</span>
+            </div>
+            <div class="item-divider" style="background: white;">
+               <div class="text-center master-color">当前学期共查询到{{result.data.length}}门成绩</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

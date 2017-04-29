@@ -1,0 +1,14 @@
+<ion-view view-title="政策文件详细信息">
+    <ion-content overflow-scroll="true" has-bouncing="false" ng-init="init()">
+        <div class="list">
+            <div class="item text-center" style="line-height: 1.5em;">
+                <span class="news-title" ng-bind="parameter.data[0].ftitle" style="white-space: pre-line;"></span>
+                <br/>
+                <span class="news-title" ng-bind="parameter.data[0].fpubtime"></span>
+            </div>
+            <div class="item item-body" ng-bind-html="parameter.data[0].fcontent">
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

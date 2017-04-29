@@ -1,0 +1,31 @@
+<ion-view view-title="教师详细信息">
+    <ion-content overflow-scroll="true" has-bouncing="false"  ng-init="init()">
+        <div class="list">
+            <div class="item item-avatar">
+                <img ng-src="{{root+parameter.request[0][0].t_imgsrc}}"/>
+                <h2>{{parameter.request[0][0].tname}}</h2>
+                <p>{{parameter.request[0][0].college}} {{parameter.request[0][0].t_system}} {{parameter.request[0][0].t_title}}</p>
+            </div>
+            <div class="item item-body">
+                <h2>性别</h2>
+                <p>{{parameter.request[0][0].tsex | gender}}</p>
+                <h2>毕业院校</h2>
+                <p>{{parameter.request[0][0].t_graduateschool}}</p>
+                <h2>学历</h2>
+                <p>{{parameter.request[0][0].t_degree}}</p>
+                <h2>教授课程</h2>
+               <!-- <p>C#程序设计</p>
+                <p>Java程序设计</p>
+                <p>ASP.NET程序设计</p>-->
+                <p ng-repeat="item in parameter.request[1]" ng-bind="item.course_name"></p>
+
+
+
+                <h2>教师信息简介</h2>
+                <p>
+                   {{parameter.request[0][0].t_desc}}
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

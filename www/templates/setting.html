@@ -1,0 +1,74 @@
+<ion-view view-title="系统设置">
+    <ion-content overflow-scroll="true" has-bouncing="false">
+        <ion-list>
+            <ion-item class="item-divider">
+
+            </ion-item>
+        <label class="item item-input item-select">
+            <div class="input-label">
+                设置当前学期
+            </div>
+            <select class="setting-select" id="select">
+                <option value="2013-2014-1">2013-2014-1</option>
+                <option value="2013-2014-2">2013-2014-2</option>
+                <option value="2014-2015-1">2014-2015-1</option>
+                <option value="2014-2015-2">2014-2015-2</option>
+                <option value="2015-2016-1">2015-2016-1</option>
+                <option value="2015-2016-2">2015-2016-2</option>
+                <option value="2016-2017-1">2016-2017-1</option>
+                <option selected="selected" value="2016-2017-2">2016-2017-2</option>
+            </select>
+         </label>
+
+
+
+            <label class="item item-input item-select" >
+                <div class="input-label" style="width: 60%;">
+                    当前开学日期
+                </div>
+                <div style="width: 40%;">
+                    <span on-tap="openDatePicker()" style="float: right;margin-right: 35px;">{{parameters.begindate}}</span>
+                </div>
+            </label>
+
+
+            <ion-item class="item-toggle">
+                教务通知提醒
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </ion-item>
+            <ion-item class="item-toggle">
+                开启自动定位
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </ion-item>
+            <ion-item class="item-toggle">
+                上课提醒
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </ion-item>
+
+            <ion-item class="item-toggle">
+                考试提醒
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

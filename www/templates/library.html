@@ -1,0 +1,60 @@
+<ion-view view-title="图书查询">
+    <ion-content overflow-scroll="true" has-bouncing="false">
+        <div class="list">
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                     <i class="icon ion-search placeholder-icon" style="color: #16bb9b !important;"></i>
+                     <input type="text" placeholder="请输入检索关键字"  name="keyword" ng-model="parameter.keyword">
+                </label>
+                <button class="button button-positive master-bg button-small" ng-click="search()">检索</button>
+            </div>
+            <!--存放检索书籍的数量-->
+            <div class="item" ng-show="result.digest!=false">
+                <h2 class="result-title">共检索到{{result.length}}本书籍</h2>
+            </div>
+            <!--当没有检索到书的时候 -->
+            <div class="result-empty" ng-show="result.length==0">
+                <div class="empty-wrap">
+                   <div class="empty-icon"></div>
+                   <h4 class="empty-text" align="center">抱歉，一本书也没有找到!!!</h4>
+                </div>
+            </div>
+           <div class="book-init" ng-show="result.digest==false">
+                <div class="empty-wrap">
+                    <div class="init-search-icon"></div>
+                    <h4 class="empty-text" align="center">好好学习，天天向上</h4>
+                </div>
+            </div>
+            <div class="card" ng-repeat="item in result.data">
+                <h3 class="book-title" align="center" ng-bind="item.bName"></h3>
+                <div class="item item-image img-padding">
+                    <img ng-src="{{root+item.bImg}}">
+                </div>
+                <div class="item">
+                    <span class="book-margin">
+                        <span class="book-caption">图书编号:</span>
+                       {{item.bNumber}}
+                    </span>
+                    <span class="book-author book-margin">
+                        <span class="book-caption">作者:</span>
+                        {{item.bAuthor}}著
+                    </span>
+                    <span class="book-time book-margin">
+                        <span class="book-caption">出版时间:</span>
+                        {{item.bPubtime}}
+                    </span>
+                    <span class="book-publish  book-margin">
+                        <span class="book-caption">出版社:</span>
+                        {{item.bPublishName}}
+                    </span>
+                    <span class="bookStatus-nouse book-margin" ng-show="item.bStockAmount-item.bLendout<=0">已全部借出</span>
+                    <span class="bookStatus-use book-margin" ng-show="item.bStockAmount-item.bLendout>0">在架</span>
+                    <span class="book-amount">
+                        <span class="book-caption">可借数</span>
+                        <span ng-class="{'book-nonumber':item.bStockAmount-item.bLendout<=0,'book-number':item.bStockAmount-item.bLendout>0}">{{item.bStockAmount-item.bLendout}}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

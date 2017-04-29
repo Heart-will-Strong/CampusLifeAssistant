@@ -1,0 +1,18 @@
+<ion-view view-title="新闻详情">
+    <ion-content overflow-scroll="true" has-bouncing="false" ng-init="init()">
+        <div class="list">
+            <div class="item text-center" style="line-height: 1.5em;">
+                <span class="news-title" ng-bind="parameter.data[0].newstitle" style="white-space: pre-line;"></span>
+                <br/>
+                <span class="news-title" ng-bind="parameter.data[0].pubtime"></span>
+            </div>
+            <div class="item item-body" ng-bind-html="parameter.data[0].newscontent">
+
+            </div>
+            <div class="row row-center">
+               <div class="col-50 text-center news-title">作者:{{parameter.data[0].author}}</div>
+               <div class="col-50 text-center news-title" style="white-space: nowrap;text-overflow: ellipsis;overflow: hidden;">来源:{{parameter.data[0].newssrc}}</div>
+            </div>
+       	</div>
+    </ion-content>
+</ion-view>

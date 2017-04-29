@@ -1,0 +1,44 @@
+<ion-view view-title="我的个人信息">
+    <ion-content overflow-scroll="true" has-bouncing="false" ng-init="init()">
+        <ion-list>
+            <ion-item class="item-avatar">
+                <img ng-src="{{root+currentUser.result.simg}}" />
+                <h2 style="padding-bottom:0.5rem;">{{currentUser.result.sname}}</h2>
+                <p>{{currentUser.result.snumber}}</p>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="ion-person  icon master-text"></i>
+                <span>性别：</span>
+                <span>{{currentUser.result.gender | gender}}</span>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-university master-text"></i>
+                <span>学院：</span>
+                <span>{{currentUser.result.scollege}}</span>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-pricetags master-text"></i>
+                <span> 专业:</span>
+                <span>{{currentUser.result.smajor}}</span>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <i class="icon ion-pinpoint master-text"></i>
+                <span>年级：</span>
+                <span>{{currentUser.result.sgrade}}级</span>
+            </ion-item>
+
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-people master-text"></i>
+                <span> 政治面貌：</span>
+                <span>{{currentUser.result.role}}</span>
+            </ion-item>
+
+            <ion-item class="item-icon-left">
+                <i class="icon ion-ios-telephone master-text"></i>
+                <span>电话：</span>
+                <span>{{currentUser.result.stelephone}}</span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,19 @@
+<ion-view view-title="校内地图">
+    <ion-content overflow-scroll="true" has-bouncing="false" style="overflow:hidden;">
+        <div class="list">
+
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                     <i class="icon ion-search placeholder-icon" style="color: #16bb9b !important;"></i>
+                     <input type="text" placeholder="请输入关键字" ng-model="parameter.keyword">
+                </label>
+                <input type="button" class="button button-positive master-bg button-small"  value="查找"  ng-click="search()"/>
+                <!--<button  ng-bind="search()">查找</button>-->
+            </div>
+
+        </div>
+        <div id="map">
+
+        </div>
+    </ion-content>
+</ion-view>

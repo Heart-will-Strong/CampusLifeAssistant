@@ -1,0 +1,29 @@
+<ion-view view-title="考试查询">
+    <ion-content overflow-scroll="true" has-bouncing="false" class="gray-color" ng-init="init()">
+        <div class="list" ng-show="parameters.length>0">
+            <div class="row row-center" >
+                <div class="col-50 grade-title text-center">考试科目</div>
+                <div class="grade-l-35 grade-title text-center">考试时间</div>
+                <div class="grade-l-15 grade-title text-center">地点</div>
+            </div>
+
+            <div ng-repeat="item in parameters.data">
+                <div class="item">
+                    <span class="grade-l grade-l-50">{{item.course_name}}</span>
+                    <span class="grade-r grade-l-35">{{item.exam_datetime |formate}}</span>
+                    <span class="grade-r grade-l-15">{{item.exam_location}}</span>
+                </div>
+            </div>
+
+            <div class="item-divider">
+                <div class="text-center red">{{parameters.length}}门课程考试时间已发布，请准时参加!</div>
+            </div>
+        </div>
+        <div class="result-empty empty-exam" ng-show="parameters.length<=0">
+            <div class="empty-wrap">
+                <div class="non-open"></div>
+                <h4 class="empty-text" align="center">当前学期的考试安排尚未发布!!!</h4>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
